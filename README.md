@@ -95,13 +95,13 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 ```
 SimpleListSampleクラス（パッケージ：jp.kronos.sample）
 　executeメソッドに以下の処理を記述する。
-　① String型の配列に「大阪」「東京」「名古屋」「福岡」の文字列をセットする。
-　② 配列の値をすべてArrayListインスタンスに格納する。
-　③ ArryListに格納されている値をすべて標準出力する。
+　①String型の配列に「大阪」「東京」「名古屋」「福岡」の文字列をセットする。
+　②配列の値をすべてArrayListインスタンスに格納する。
+　③ArryListに格納されている値をすべて標準出力する。
  
 ApiMain1クラス（パッケージ：jp.kronos.main）
 　mainメソッドに以下の処理を記述する。
-　① SimpleListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
+　①SimpleListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
 ```
 
 [解答例](/ans/api-10.md)
@@ -123,6 +123,7 @@ ListSampleクラス（パッケージ：jp.kronos.sample）
 　④ArrayListインスタンスを戻り値として返す
 
 ApiMain2クラス（パッケージ：jp.kronos.main）
+　mainメソッドに以下の処理を記述する。
 　①ListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
 　②戻り値で受け取ったList型のインスタンスからDogインスタンスを取得し、それぞれのshowNameメソッドを呼び出す。
 ```
@@ -150,17 +151,17 @@ ApiMain3クラス（パッケージ：jp.kronos.main）
 ```
 SimpleMapSampleクラス（パッケージ：jp.kronos.sample）
 　①HashMapフィールド（cities）をprivateで定義する
-　①コンストラクタでcitiesに以下の情報をセットする。（すべてString型の文字列）
+　②コンストラクタでcitiesに以下の情報をセットする。（すべてString型の文字列）
 　　キー："001" 値："大阪"
 　　キー："002" 値："東京"
 　　キー："003" 値："名古屋"
 　　キー："004" 値："福岡"
- 
-　②executeメソッドでStringの引数（キー）を受け取り、cities内でキーに一致する値を取得し、標準出力する。
+　③executeメソッドでStringの引数（キー）を受け取り、cities内でキーに一致する値を取得し、標準出力する。
 
 ApiMain4クラス（パッケージ：jp.kronos.main）
+　mainメソッドに以下の処理を記述する。
 　①SimpleMapSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
-　※キーは適当に入力する（実行時引数でも良い）
+　　※キーは適当に入力する（実行時引数でも良い）
 ```
 
 [解答例](/ans/api-13.md)
@@ -170,12 +171,13 @@ ApiMain4クラス（パッケージ：jp.kronos.main）
 
 ```
 ExceptionSampleクラス（パッケージ：jp.kronos.sample）
-　executeメソッド
-　　標準入力で整数値を入力させ,入力された値をint型に変換し標準出力する。
-　　整数値以外が入力され、java.lang.NumberFormatExceptionが発生した場合は、「整数値以外が入力されました」と出力する。
+　executeメソッドに以下の処理を記述する。
+　①標準入力で整数値を入力させ,入力された値をint型に変換し標準出力する。
+　②整数値以外が入力され、java.lang.NumberFormatExceptionが発生した場合は、「整数値以外が入力されました」と出力する。
 
 ApiMain5クラス（パッケージ：jp.kronos.main）
-　ExceptionSampleクラスのインスタンスを生成しexecuteメソッドを呼び出す。
+　mainメソッドに以下の処理を記述する。
+　①ExceptionSampleクラスのインスタンスを生成しexecuteメソッドを呼び出す。
 ```
 
 [解答例](/ans/api-14.md)
@@ -185,16 +187,17 @@ ApiMain5クラス（パッケージ：jp.kronos.main）
 
 ```
 CustomExceptionSampleクラス（パッケージ：jp.kronos.sample）
-　execute(String str)メソッド
+　executeメソッド(引数：String)
 　　引数で受け取った文字列が5文字以内かチェックをし、6文字以上の場合はTooLongLengthExceptionをスローする。
 
 TooLongLengthExceptionクラス（パッケージ：jp.kronos.exception）
 　文字列の文字数が多すぎる際に発生する例外
 
 ApiMain6クラス（パッケージ：jp.kronos.main）
-　標準入力で文字列を入力させる
-　CustomExceptionSampleクラスのインスタンスを生成し入力された文字列を引数にexecuteメソッドを呼び出す。
-　TooLongLengthExceptionが発生した場合は「文字列は5文字以内で入力してください」と出力する。
+　mainメソッドに以下の処理を記述する。
+　①標準入力で文字列を入力させる
+　②CustomExceptionSampleクラスのインスタンスを生成し、入力された文字列を引数にexecuteメソッドを呼び出す。
+　③TooLongLengthExceptionが発生した場合は、「文字列は5文字以内で入力してください」と出力する。
 ```
 
 [解答例](/ans/api-15.md)
@@ -204,15 +207,16 @@ ApiMain6クラス（パッケージ：jp.kronos.main）
 
 ```
 SimpleFileReaderSampleクラス（パッケージ：jp.kronos.sample）
-List execute()メソッド
-　テキストファイル「sample.txt」から読み込んだ文字列をArrayList<String>に詰めて返却する
+　executeメソッド(引数：なし、戻り値：List)
+　　テキストファイル「sample.txt」から読み込んだ文字列をArrayList<String>に格納して返却する
 
 sample.txt
 　自由に作成しなさい
 
 ApiMain7クラス（パッケージ：jp.kronos.main）
-　SimpleFileReaderSampleクラスのインスタンスを生成しexecuteメソッドを呼び出す。
-　executeメソッドの戻り値を受け取り、すべて標準出力する。
+　mainメソッドに以下の処理を記述する。
+　①SimpleFileReaderSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
+　②executeメソッドの戻り値を受け取り、すべて標準出力する。
 ```
 
 [解答例](/ans/api-16.md)
