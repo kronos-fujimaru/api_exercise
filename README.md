@@ -1,4 +1,4 @@
-# Java API
+# Java API 演習問題
 
 ### 演習1
 
@@ -222,7 +222,7 @@ ApiMain7クラス（パッケージ：jp.kronos.main）
 
 ```
 ApiMain8クラス（パッケージ：jp.kronos.main）
-　本日の日付を「yyyy年MM月dd日 HH時mm分」の形式で表示しなさい。
+　本日の日付を「2020年8月19日 09時15分」の形式で表示しなさい。
 ```
 
 [解答例](/ans/api-17.md)
