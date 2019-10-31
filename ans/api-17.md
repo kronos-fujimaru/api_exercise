@@ -1,14 +1,27 @@
 #### ApiMain8.java
 ```java
-import java.text.SimpleDateFormat;
-import java.util.Date;
+package jp.kronos.main;
 
-public class ApiMain8 {
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
-    public static void main(String[] args) {
-        Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy年M月dd日 HH時mm分");
-        System.out.println(sdf.format(date));
+public class BufferedReaderSample6 {
+
+    public static void main(String[] args) throws IOException {
+        String path = "C:\\study\\employee.csv";
+
+        BufferedReader br = new BufferedReader(new FileReader(path));
+
+        String line = br.readLine();
+        while (line != null) {
+            String name = line.split(",")[1];
+            if (name.contains("Yamada")) {
+                System.out.println(line);
+            }
+            line = br.readLine();
+        }
+        br.close();
     }
 
 }

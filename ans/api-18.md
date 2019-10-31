@@ -1,18 +1,16 @@
-#### ApiMain9.java
+#### ApiMain8.java
 ```java
-import java.util.Calendar;
+package jp.kronos.main;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ApiMain9 {
 
     public static void main(String[] args) {
-    	String[] dayOfWeek = {"日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"};
-        Calendar cal = Calendar.getInstance();
-
-        // 日付の設定（※月は0から始まる）
-        cal.set(1986,  7, 19);
-
-        int numWeek = cal.get(Calendar.DAY_OF_WEEK);
-        System.out.println(dayOfWeek[numWeek - 1]);
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy年M月dd日 HH時mm分");
+        System.out.println(sdf.format(date));
     }
 
 }

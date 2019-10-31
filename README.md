@@ -104,7 +104,7 @@ SimpleListSampleクラス（パッケージ：jp.kronos.sample）
 　①String型の配列に「大阪」「東京」「名古屋」「福岡」の文字列をセットする。
 　②配列の値をすべてArrayListインスタンスに格納する。
 　③ArryListに格納されている値をすべて標準出力する。
- 
+
 ApiMain1クラス（パッケージ：jp.kronos.main）
 　mainメソッドに以下の処理を記述する。
 　①SimpleListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
@@ -227,12 +227,25 @@ ApiMain7クラス（パッケージ：jp.kronos.main）
 
 [解答例](/ans/api-16.md)
 
-
 ### 演習17
 
 ```
+employee.csv
+　以下の内容でCSVファイルを用意する。
+　1,Yamada Taro,30,Male
+　2,Tanaka Hanako,26,Female
+　3,Yamamoto Kenji,42,Male
+　4,Suzuki Ichiro,45,Male
+　5,Yamada Chie,34,Female
+　6,Goto Hajime,23,Male
+　7,Tajima Kanako,31,Female
+　8,Yamada Kotaro,27,Male
+　9,Fukushige Yozo,52,Male
+　10,Yamamoto Tetsuko,27,Female
+
 ApiMain8クラス（パッケージ：jp.kronos.main）
-　本日の日付を「2020年8月19日 09時15分」の形式で表示しなさい。
+　mainメソッドに以下の処理を記述する。
+　①CSVファイル「employee.csv」から読み込んだ情報のうち、「Yamada」さんの情報のみ標準出力する。
 ```
 
 [解答例](/ans/api-17.md)
@@ -241,10 +254,20 @@ ApiMain8クラス（パッケージ：jp.kronos.main）
 ### 演習18
 
 ```
+ApiMain8クラス（パッケージ：jp.kronos.main）
+　本日の日付を「2020年8月19日 09時15分」の形式で表示しなさい。
+```
+
+[解答例](/ans/api-18.md)
+
+
+### 演習19
+
+```
 ApiMain9クラス（パッケージ：jp.kronos.main）
 　CalendarクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
 　あなたの生年月日の曜日を表示しなさい。
 　（例）1986年8月19日なら「火曜日」と表示する。
 ```
 
-[解答例](/ans/api-18.md)
+[解答例](/ans/api-19.md)
