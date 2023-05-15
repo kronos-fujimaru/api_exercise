@@ -1,27 +1,20 @@
-#### ApiMain8.java
+#### ApiMain17.java
 ```java
 package jp.kronos.main;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.util.Calendar;
 
-public class BufferedReaderSample6 {
+public class ApiMain17 {
 
-    public static void main(String[] args) throws IOException {
-        String path = "C:\\study\\employee.csv";
+    public static void main(String[] args) {
+        String[] dayOfWeek = {"日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"};
+        Calendar cal = Calendar.getInstance();
 
-        BufferedReader br = new BufferedReader(new FileReader(path));
+        // 日付の設定（※月は0から始まる）
+        cal.set(1986,  7, 19);
 
-        String line = br.readLine();
-        while (line != null) {
-            String name = line.split(",")[1];
-            if (name.contains("Yamada")) {
-                System.out.println(line);
-            }
-            line = br.readLine();
-        }
-        br.close();
+        int numWeek = cal.get(Calendar.DAY_OF_WEEK);
+        System.out.println(dayOfWeek[numWeek - 1]);
     }
 
 }

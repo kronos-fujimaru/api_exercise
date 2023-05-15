@@ -8,36 +8,31 @@ import java.util.List;
 public class SimpleListSample {
     
     public void execute() {
-        String[] prefs = {"大阪", "東京", "名古屋", "福岡"};
-        List<String> prefList = new ArrayList<>();
-        for(int i = 0; i < prefs.length; i++) {
-            prefList.add(prefs[i]);
-        }
+        List<String> prefs = new ArrayList<>();
+        prefs.add("大阪");
+        prefs.add("東京");
+        prefs.add("名古屋");
+        prefs.add("福岡");
         
-        for (int i = 0; i < prefList.size(); i++) {
-            System.out.println(prefList.get(i));
+        for (int i = 0; i < prefs.size(); i++) {
+            System.out.println(prefs.get(i));
         }
-
-        // 拡張for文の場合
-        //for (String pref : prefList) {
-        //    System.out.println(pref);
-        //}
     }
 }
 ```
 
-#### ApiMain1.java
+#### ApiMain10.java
 ```java
 package jp.kronos.main;
 
-import jp.kronos.sample.SimpleListSample;
+import jp.kronos.sample.PrefListSample;
 
-public class ApiMain1 {
+public class ApiMain10 {
 
     public static void main(String[] args) {
-        SimpleListSample sample = new SimpleListSample();
+        PrefListSample sample = new PrefListSample();
         sample.execute();
     }
-}
 
+}
 ```

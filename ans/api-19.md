@@ -1,21 +1,53 @@
-#### ApiMain10.java
+#### SimpleFileReaderSample.java
+```java
+package jp.kronos.sample;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class SimpleFileReaderSample {
+    public List<String> execute() throws IOException {
+
+        List<String> list = new ArrayList<>();
+
+        String filePath = ""; // TODO 自分で設定したファイルのパスを設定する
+        FileReader fr = new FileReader(filePath);
+
+        BufferedReader br = new BufferedReader(fr);
+
+        String line = br.readLine();
+        while (line != null) {
+            list.add(line);
+            line = br.readLine();
+        }
+        br.close();
+
+        return list;
+    }
+}
+```
+
+#### ApiMain19.java
 ```java
 package jp.kronos.main;
 
-import java.util.Calendar;
+import java.io.IOException;
+import java.util.List;
 
-public class ApiMain10 {
+import jp.kronos.sample.SimpleFileReaderSample;
 
-    public static void main(String[] args) {
-        String[] dayOfWeek = {"日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"};
-        Calendar cal = Calendar.getInstance();
+public class ApiMain19 {
 
-        // 日付の設定（※月は0から始まる）
-        cal.set(1986,  7, 19);
+    public static void main(String[] args) throws IOException {
+        SimpleFileReaderSample sample = new SimpleFileReaderSample();
+        List<String> results = sample.execute();
 
-        int numWeek = cal.get(Calendar.DAY_OF_WEEK);
-        System.out.println(dayOfWeek[numWeek - 1]);
+        for (String result : results) {
+            System.out.println(result);
+        }
     }
-
 }
 ```

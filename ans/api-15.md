@@ -1,50 +1,49 @@
-#### CustomExceptionSample.java
-```java
-package jp.kronos.sample;
-
-import jp.kronos.exception.TooLongLengthException;
-
-public class CustomExceptionSample {
-    
-    public void execute(String input) throws TooLongLengthException {
-        if(input.length() >= 6) {
-            throw new TooLongLengthException();
-        }
-    }
-}
-```
-
-#### TooLongLengthException.java
-```java
-package jp.kronos.exception;
-
-public class TooLongLengthException extends Exception {
-}
-```
-
-#### ApiMain6.java
+#### ApiMain15.java
 ```java
 package jp.kronos.main;
 
+import java.util.InputMismatchException;
+import java.util.Random;
 import java.util.Scanner;
 
-import jp.kronos.exception.TooLongLengthException;
-import jp.kronos.sample.CustomExceptionSample;
+public class ApiMain15 {
 
-public class ApiMain6 {
-    
     public static void main(String[] args) {
-        CustomExceptionSample sample = new CustomExceptionSample();
-        Scanner scan = new Scanner(System.in);
-        String input = scan.nextLine();
+        String[] signs = {"グー", "チョキ", "パー"};
         
+        Scanner scan = new Scanner(System.in);
+        System.out.println("0:グー、1:チョキ、2:パー");
+        
+        // プレイヤーの手を入力してもらう
+        int player = -1;
         try {
-            sample.execute(input);
-        } catch(TooLongLengthException e) {
-            System.out.println("文字列は5文字以内で入力してください");
+            player = scan.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("入力値が不正です。");
+            return;
         }
         
-        scan.close();
+        if (!(player >= 0 && player <= 2)) {
+            System.out.println("0～2の数値を入力してください。");
+            return;
+        }
+        
+        // コンピュータの手をランダムに決める
+        int pc = new Random().nextInt(3);
+        
+        // それぞれの手を出力する
+        System.out.println("PLAYER: " + signs[player]);
+        System.out.println("COMPUTER: " + signs[pc]);
+        
+        // 結果を表示する
+        if ((player == 0 && pc == 1) || (player == 1 && pc == 2) || (player == 2 && pc == 0)) {
+            System.out.println("YOU WIN!");
+        } else if ((player == 0 && pc == 2) || (player == 1 && pc == 0) || (player == 2 && pc == 1)) {
+            System.out.println("YOU LOSE!");
+        } else {
+            System.out.println("DRAW!");
+        }
     }
+
 }
 ```

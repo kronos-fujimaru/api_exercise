@@ -1,32 +1,48 @@
-#### ApiMain3.java
+#### NumListSample.java
+
+```java
+package jp.kronos.sample;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class NumListSample {
+    public void execute() {
+        List<Integer> nums = new ArrayList<>();
+        nums.add(1000);
+        nums.add(500);
+        nums.add(300);
+        nums.add(2000);
+        nums.add(700);
+        
+        int total = 0;
+        for (Integer num : nums) {
+            total += num;
+        }
+        nums.add(total);
+        
+        for (int i = 0; i < nums.size() - 1; i++) {
+            System.out.println(nums.get(i));
+        }
+        System.out.println("合計: " + nums.get(nums.size() - 1));
+    }
+    
+}
+```
+
+#### ApiMain12.java
+
 ```java
 package jp.kronos.main;
 
-import java.util.HashSet;
-import java.util.Set;
+import jp.kronos.sample.NumListSample;
 
-public class ApiMain3 {
+public class ApiMain12 {
+
     public static void main(String[] args) {
-        Set<String> courseSet = new HashSet<>();
-        courseSet.add("CSS");
-        courseSet.add("HTML");
-        courseSet.add("JavaScript");
-        courseSet.add("PHP");
-        
-        if(courseSet.contains("Java")) {
-            System.out.println("Javaコースはあります。");
-        } else {
-            System.out.println("Javaコースはありません。");
-        }
-        
-        // セットに「Java」の文字列を追加し、再度存在チェックをする。
-        courseSet.add("Java");
-        
-        if(courseSet.contains("Java")) {
-            System.out.println("Javaコースはあります。");
-        } else {
-            System.out.println("Javaコースはありません。");
-        }    
+        NumListSample sample = new NumListSample();
+        sample.execute();
     }
+
 }
 ```

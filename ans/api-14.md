@@ -1,38 +1,45 @@
-#### ExceptionSample.java
+#### PrefMapSample.java
 ```java
 package jp.kronos.sample;
 
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
-public class ExceptionSample {
+public class PrefMapSample {
+    private Map<String, String> prefs = new HashMap<>();
     
-    public void execute() {
-        Scanner scan = new Scanner(System.in);
-        
-        try {
-            String input = scan.nextLine();
-            int number = Integer.parseInt(input);
-            System.out.println(number);
-        } catch(NumberFormatException e) {
-            System.out.println("整数値以外が入力されました");
-        } 
-        
-        scan.close();
+    public PrefMapSample() {
+        this.prefs.put("001", "大阪");
+        this.prefs.put("002", "東京");
+        this.prefs.put("003", "名古屋");
+        this.prefs.put("004", "福岡");
+    }
+    
+    public void execute(String key) {
+        String pref = prefs.get(key);
+        if (pref == null) {
+            throw new NullPointerException("指定した都道府県IDは存在しません。");
+        }
     }
 }
 ```
 
-#### ApiMain5.java
+#### ApiMain13.java
 ```java
 package jp.kronos.main;
 
-import jp.kronos.sample.ExceptionSample;
+import jp.kronos.sample.PrefMapSample;
 
-public class ApiMain5 {
-    
+public class ApiMain13 {
+
     public static void main(String[] args) {
-        ExceptionSample sample = new ExceptionSample();
-        sample.execute();
+        try {
+            PrefMapSample sample = new PrefMapSample();
+            sample.execute("005");
+        } catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+        }
     }
+
 }
 ```

@@ -2,7 +2,7 @@
 
 **APIドキュメント**
 
-<a href="https://docs.oracle.com/javase/jp/8/docs/api/" target="_blank">https://docs.oracle.com/javase/jp/8/docs/api/</a>
+<a href="https://docs.oracle.com/javase/jp/17/docs/api/" target="_blank">https://docs.oracle.com/javase/jp/17/docs/api/</a>
 
 <br>
 
@@ -13,8 +13,11 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 "HelloWorld"内に 'r' が含まれているかを T または F で表示しなさい。
 ```
 
+<br>
+
 [解答例](/ans/api-01.md)
 
+<br>
 
 ### 演習2
 
@@ -23,8 +26,11 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 "HelloWorld"内に "orl"が出現するインデックス位置を表示しなさい。
 ```
 
+<br>
+
 [解答例](/ans/api-02.md)
 
+<br>
 
 ### 演習3
 
@@ -33,8 +39,11 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 "HelloWorld"内に 'l'が最後に出現するインデックス位置を表示しなさい。
 ```
 
+<br>
+
 [解答例](/ans/api-03.md)
 
+<br>
 
 ### 演習4
 
@@ -43,8 +52,11 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 "HelloWorld"の文字数を表示しなさい。
 ```
 
+<br>
+
 [解答例](/ans/api-04.md)
 
+<br>
 
 ### 演習5
 
@@ -53,8 +65,11 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 "HellaWarld"の'a'を'o'に置換して表示しなさい。
 ```
 
+<br>
+
 [解答例](/ans/api-05.md)
 
+<br>
 
 ### 演習6
 
@@ -63,8 +78,11 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 "HelloWorld"を'o'で区切った部分文字列を改行しながらすべて表示しなさい。
 ```
 
+<br>
+
 [解答例](/ans/api-06.md)
 
+<br>
 
 ### 演習7
 
@@ -73,8 +91,11 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 "HelloWorld"のインデックス位置、3～7の部分文字列を表示しなさい。
 ```
 
+<br>
+
 [解答例](/ans/api-07.md)
 
+<br>
 
 ### 演習8
 
@@ -83,8 +104,11 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 "HelloWorld"をすべて大文字にして表示しなさい。
 ```
 
+<br>
+
 [解答例](/ans/api-08.md)
 
+<br>
 
 ### 演習9
 
@@ -93,123 +117,245 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 " HelloWorld "の前後のスペースを排除して、表示しなさい。
 ```
 
+<br>
+
 [解答例](/ans/api-09.md)
 
+<br>
 
 ### 演習10
 
 ```
-SimpleListSampleクラス（パッケージ：jp.kronos.sample）
-　executeメソッドに以下の処理を記述する。
-　①String型の配列に「大阪」「東京」「名古屋」「福岡」の文字列をセットする。
-　②配列の値をすべてArrayListインスタンスに格納する。
-　③ArryListに格納されている値をすべて標準出力する。
+PrefListSampleクラス（パッケージ：jp.kronos.sample）
+　executeメソッド（戻り値なし、引数なし）に以下の処理を記述する。
+　①String型のArrayListインスタンスに「大阪」「東京」「名古屋」「福岡」の文字列を格納する。
+　②通常のfor文（拡張for文ではない）を使用してArrayListに格納されている値をすべてコンソールに出力する。
 
-ApiMain1クラス（パッケージ：jp.kronos.main）
+ApiMain10クラス（パッケージ：jp.kronos.main）
 　mainメソッドに以下の処理を記述する。
-　①SimpleListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
+　①PrefListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
 ```
+
+<br>
 
 [解答例](/ans/api-10.md)
 
+<br>
 
 ### 演習11
 
 ```
-Dogクラス（パッケージ：jp.kronos.animal）
-　①名前（name）を保持するprivateのString型フィールド
-　②コンストラクタの引数で受け取った文字列をnameにセットする
-　③showNameメソッドでは「私の名前は○○です。」と出力する
-
-ListSampleクラス（パッケージ：jp.kronos.sample）
-　executeメソッドに以下の処理を記述する。
-　①繰り返し標準入力で犬の名前を入力させる。ブランクが入力された場合標準入力処理を終了する
-　②入力された名前の数だけDogクラスのインスタンスを生成し、名前をセットする
-　③生成したDogインスタンスをすべてArrayListインスタンスに格納する
-　④ArrayListインスタンスを戻り値として返す
-
-ApiMain2クラス（パッケージ：jp.kronos.main）
-　mainメソッドに以下の処理を記述する。
-　①ListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
-　②戻り値で受け取ったList型のインスタンスからDogインスタンスを取得し、それぞれのshowNameメソッドを呼び出す。
+演習10で、PrefListSampleクラスのexecuteメソッドの繰り返し処理を拡張for文に修正する。
 ```
+
+<br>
 
 [解答例](/ans/api-11.md)
 
+<br>
 
 ### 演習12
 
 ```
-ApiMain3クラス（パッケージ：jp.kronos.main）
-　HashSetクラスのインスタンスを生成し、「CSS」「HTML」「JavaScript」「PHP」の文字列を格納する。
-　HashSetクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
-　「Java」がセットに存在する場合は「Javaコースはあります。」、存在しない場合は「Javaコースはありません。」と表示する。
-　（存在しない想定）
+NumListSampleクラス（パッケージ：jp.kronos.sample）
+　executeメソッド（戻り値なし、引数なし）に以下の処理を記述する。
+　①Integer型のArrayListインスタンスに「1000」「500」「300」「2000」「700」の整数を格納する。
+　②ArrayListに格納されている値の合計値をArrayListに追加する。
+　③ArrayListに格納されている各値をコンソールに出力した後に、「合計: [合計値]」を出力する。
 
-　セットに「Java」の文字列を追加し、再度存在チェックをする。
+ApiMain12クラス（パッケージ：jp.kronos.main）
+　mainメソッドに以下の処理を記述する。
+　①NumListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
 ```
+
+<br>
+
+**＜出力結果＞**
+
+```
+1000
+500
+300
+2000
+700
+合計: 4500
+```
+
+<br>
 
 [解答例](/ans/api-12.md)
 
+<br>
 
 ### 演習13
 
 ```
-SimpleMapSampleクラス（パッケージ：jp.kronos.sample）
-　①HashMapフィールド（cities）をprivateで定義する
-　②コンストラクタでcitiesに以下の情報をセットする。（すべてString型の文字列）
+PrefMapSampleクラス（パッケージ：jp.kronos.sample）
+　①HashMapフィールド（prefs）をprivateなフィールドとして定義する
+　②コンストラクタでprefsに以下の情報をセットする。（すべてString型の文字列）
 　　キー："001" 値："大阪"
 　　キー："002" 値："東京"
 　　キー："003" 値："名古屋"
 　　キー："004" 値："福岡"
-　③executeメソッドでStringの引数（キー）を受け取り、cities内でキーに一致する値を取得し、標準出力する。
+　③executeメソッドでStringの引数（キー）を受け取り、prefs内でキーに一致する値を取得し、コンソールに出力する。
 
-ApiMain4クラス（パッケージ：jp.kronos.main）
+ApiMain13クラス（パッケージ：jp.kronos.main）
 　mainメソッドに以下の処理を記述する。
-　①SimpleMapSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
-　　※キーは適当に入力する（実行時引数でも良い）
+　①PrefMapSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
+　　※キーは適当に指定する
 ```
+
+<br>
 
 [解答例](/ans/api-13.md)
 
+<br>
 
 ### 演習14
 
 ```
-ExceptionSampleクラス（パッケージ：jp.kronos.sample）
-　executeメソッドに以下の処理を記述する。
-　①標準入力で整数値を入力させ,入力された値をint型に変換し標準出力する。
-　②整数値以外が入力され、java.lang.NumberFormatExceptionが発生した場合は、「整数値以外が入力されました」と出力する。
+PrefMapSampleクラス（パッケージ：jp.kronos.sample）
+　executeメソッドを以下のように修正する。
+　①引数（キー）でHashMapフィールド（prefs）から取得した値がNullの場合は、以下のメッセージを追加してNullPointerExceptionをスローする。
+　　メッセージ: 指定した都道府県IDは存在しません。
 
-ApiMain5クラス（パッケージ：jp.kronos.main）
-　mainメソッドに以下の処理を記述する。
-　①ExceptionSampleクラスのインスタンスを生成しexecuteメソッドを呼び出す。
+ApiMain13クラス（パッケージ：jp.kronos.main）
+　mainメソッドを以下のように修正する。
+　①NullPointerExceptionをキャッチし、例外オブジェクトのメッセージをコンソールに出力する。
+　　※getMessage()メソッドで例外オブジェクトのメッセージを取得できる
 ```
+
+<br>
+
+**＜出力結果＞**　※キーに "005" を指定した場合
+
+```
+指定した都道府県IDは存在しません。
+```
+
+<br>
 
 [解答例](/ans/api-14.md)
 
+<br>
 
 ### 演習15
 
 ```
-CustomExceptionSampleクラス（パッケージ：jp.kronos.sample）
-　executeメソッド(引数：String)
-　　引数で受け取った文字列が5文字以内かチェックをし、6文字以上の場合はTooLongLengthExceptionをスローする。
-
-TooLongLengthExceptionクラス（パッケージ：jp.kronos.exception）
-　文字列の文字数が多すぎる際に発生する例外
-
-ApiMain6クラス（パッケージ：jp.kronos.main）
-　mainメソッドに以下の処理を記述する。
-　①標準入力で文字列を入力させる
-　②CustomExceptionSampleクラスのインスタンスを生成し、入力された文字列を引数にexecuteメソッドを呼び出す。
-　③TooLongLengthExceptionが発生した場合は、「文字列は5文字以内で入力してください」と出力する。
+ApiMain15クラス（パッケージ：jp.kronos.main）
+　Scannerクラスを使用した標準入力でジャンケンをするプログラムである。
+　0（グー）、1（チョキ）、2（パー）のいずれかを入力してもらい、コンピュータと勝負する。
+　ただし、整数以外（文字列など）を入力すると例外が発生するため以下のように例外の対応をする。
+　①発生する例外の種類を調べる。
+　②該当する例外をキャッチし、以下のメッセージをコンソールに表示する。
+　　メッセージ: 入力値が不正です。
+　③ジャンケンプログラムを終了する。
+　　※returnキーワードで終了できる
 ```
+
+<br>
+
+**ApiMain15.java**
+
+```java
+package jp.kronos.main;
+
+import java.util.InputMismatchException;
+import java.util.Random;
+import java.util.Scanner;
+
+public class ApiMain15 {
+
+    public static void main(String[] args) {
+        String[] signs = {"グー", "チョキ", "パー"};
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("0:グー、1:チョキ、2:パー");
+        
+        // プレイヤーの手を入力してもらう
+        int player = scan.nextInt();
+        
+        if (!(player >= 0 && player <= 2)) {
+            System.out.println("0～2の数値を入力してください。");
+            return;
+        }
+        
+        // コンピュータの手をランダムに決める
+        int pc = new Random().nextInt(3);
+        
+        // それぞれの手を出力する
+        System.out.println("PLAYER: " + signs[player]);
+        System.out.println("COMPUTER: " + signs[pc]);
+        
+        // 結果を表示する
+        if ((player == 0 && pc == 1) || (player == 1 && pc == 2) || (player == 2 && pc == 0)) {
+            System.out.println("YOU WIN!");
+        } else if ((player == 0 && pc == 2) || (player == 1 && pc == 0) || (player == 2 && pc == 1)) {
+            System.out.println("YOU LOSE!");
+        } else {
+            System.out.println("DRAW!");
+        }
+    }
+
+}
+```
+
+<br>
+
+**＜出力結果＞**　※"a"を入力した場合
+
+```
+0:グー、1:チョキ、2:パー
+a
+入力値が不正です。
+```
+
+<br>
 
 [解答例](/ans/api-15.md)
 
+<br>
+
 
 ### 演習16
+
+```
+ApiMain16クラス（パッケージ：jp.kronos.main）
+　本日の日付を「2020年8月19日 09時15分」のような形式で表示しなさい。
+```
+
+<br>
+
+[解答例](/ans/api-16.md)
+
+<br>
+
+### 演習17
+
+```
+ApiMain17クラス（パッケージ：jp.kronos.main）
+　CalendarクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
+　あなたの生年月日の曜日を表示しなさい。
+　（例）1986年8月19日なら「火曜日」と表示する。
+```
+
+> ヒント<br>Calendarクラスのget()メソッドで引数に「Calendar.DAY_OF_WEEK」を指定すると、1（日曜日）～ 7（土曜日）の数値が取得できます。
+
+<br>
+
+[解答例](/ans/api-17.md)
+
+<br>
+
+### 演習18
+
+```
+作成中
+```
+
+<br>
+
+### 演習19
 
 ```
 SimpleFileReaderSampleクラス（パッケージ：jp.kronos.sample）
@@ -219,15 +365,19 @@ SimpleFileReaderSampleクラス（パッケージ：jp.kronos.sample）
 sample.txt
 　自由に作成しなさい
 
-ApiMain7クラス（パッケージ：jp.kronos.main）
+ApiMain19クラス（パッケージ：jp.kronos.main）
 　mainメソッドに以下の処理を記述する。
 　①SimpleFileReaderSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
 　②executeメソッドの戻り値を受け取り、すべて標準出力する。
 ```
 
-[解答例](/ans/api-16.md)
+<br>
 
-### 演習17
+[解答例](/ans/api-19.md)
+
+<br>
+
+### 演習20
 
 ```
 employee.csv
@@ -248,26 +398,8 @@ ApiMain8クラス（パッケージ：jp.kronos.main）
 　①CSVファイル「employee.csv」から読み込んだ情報のうち、「Yamada」さんの情報のみ標準出力する。
 ```
 
-[解答例](/ans/api-17.md)
+<br>
 
+[解答例](/ans/api-20.md)
 
-### 演習18
-
-```
-ApiMain8クラス（パッケージ：jp.kronos.main）
-　本日の日付を「2020年8月19日 09時15分」の形式で表示しなさい。
-```
-
-[解答例](/ans/api-18.md)
-
-
-### 演習19
-
-```
-ApiMain9クラス（パッケージ：jp.kronos.main）
-　CalendarクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
-　あなたの生年月日の曜日を表示しなさい。
-　（例）1986年8月19日なら「火曜日」と表示する。
-```
-
-[解答例](/ans/api-19.md)
+<br>

@@ -1,67 +1,20 @@
-#### Dog.java
-```java
-package jp.kronos.animal;
-
-public class Dog {
-    private String name;
-    
-    public Dog(String name) {
-        this.name = name;
-    }
-    
-    public void showName() {
-        System.out.println("私の名前は" + name + "です。");
-    }
-}
-```
-
-#### ListSample.java
+#### PrefListSample.java
 ```java
 package jp.kronos.sample;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-import jp.kronos.animal.Dog;
-
-public class ListSample {
-
-    public List<Dog> execute() {
-        Scanner scan = new Scanner(System.in);
-        List<Dog> dogList = new ArrayList<>();
+public class PrefListSample {
+    public void execute() {
+        List<String> prefs = new ArrayList<>();
+        prefs.add("大阪");
+        prefs.add("東京");
+        prefs.add("名古屋");
+        prefs.add("福岡");
         
-        while (true) {
-            String input = scan.nextLine();
-            if ("".equals(input)) {
-                break;
-            } else {
-                dogList.add(new Dog(input));
-            }
-        }
-        
-        scan.close();
-        return dogList;
-    }
-}
-```
-
-#### ApiMain2.java
-```java
-package jp.kronos.main;
-
-import java.util.List;
-
-import jp.kronos.animal.Dog;
-import jp.kronos.sample.ListSample;
-
-public class ApiMain2 {
-
-    public static void main(String[] args) {
-        ListSample sample = new ListSample();
-        List<Dog> dogList = sample.execute();
-        for (Dog dog : dogList) {
-            dog.showName();
+        for (String pref : prefs) {
+            System.out.println(pref);
         }
     }
 }

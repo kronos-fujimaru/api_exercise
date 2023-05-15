@@ -1,41 +1,43 @@
-#### SimpleMapSample.java
+#### PrefMapSample.java
 ```java
 package jp.kronos.sample;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class SimpleMapSample {
-
-    private Map<String, String> cities = new HashMap<>();
-
-    public SimpleMapSample() {
-        this.cities.put("001", "大阪");
-        this.cities.put("002", "東京");
-        this.cities.put("003", "名古屋");
-        this.cities.put("004", "福岡");
+public class PrefMapSample {
+    private Map<String, String> prefs = new HashMap<>();
+    
+    public PrefMapSample() {
+        this.prefs.put("001", "大阪");
+        this.prefs.put("002", "東京");
+        this.prefs.put("003", "名古屋");
+        this.prefs.put("004", "福岡");
     }
-
+    
     public void execute(String key) {
-        System.out.println(cities.get(key));
+        System.out.println(prefs.get(key));
+        
+        String pref = prefs.get(key);
+        if (pref == null) {
+            throw new NullPointerException("指定した都道府県IDは存在しません。");
+        }
     }
 }
 ```
 
-#### ApiMain4.java
+#### ApiMain13.java
 ```java
 package jp.kronos.main;
 
-import jp.kronos.sample.SimpleMapSample;
+import jp.kronos.sample.PrefMapSample;
 
-public class ApiMain4 {
+public class ApiMain13 {
 
     public static void main(String[] args) {
-        SimpleMapSample sample = new SimpleMapSample();
-        sample.execute("001");
-
-        // 実行時引数を使用する場合
-        //sample.execute(args[0]);
+        PrefMapSample sample = new PrefMapSample();
+        sample.execute("005");
     }
+
 }
 ```
