@@ -250,7 +250,6 @@ ApiMain15クラス（パッケージ：jp.kronos.main）
 　②該当する例外をキャッチし、以下のメッセージをコンソールに表示する。
 　　メッセージ: 入力値が不正です。
 　③ジャンケンプログラムを終了する。
-　　※returnキーワードで終了できる
 ```
 
 <br>
@@ -350,8 +349,9 @@ ApiMain17クラス（パッケージ：jp.kronos.main）
 ### 演習18
 
 ```
-Userクラス（パッケージ：jp.kronos.domain）
-　ログインID、パスワード、姓、名のフィールドとそれぞれのgetter/setterを持つクラス。
+Userクラス（パッケージ：jp.kronos.dto）
+　ログインID、パスワード、姓、名のフィールドとそれぞれのgetter/setterを持つ。
+　ログインID、パスワード、姓、名を引数を取り、それぞれのフィールドに設定するコンストラクタを用意する。
 UserSampleクラス（パッケージ：jp.kronos.sample）
 　①ArrayListフィールド（users）をprivateなフィールドとして定義する
 　②コンストラクタでusersに以下の情報をセットする。
@@ -366,67 +366,6 @@ UserSampleクラス（パッケージ：jp.kronos.sample）
 ApiMain18クラス（パッケージ：jp.kronos.main）
 　mainメソッドに以下の処理を記述する。
 　①UserSampleクラスのインスタンスを生成し、showUsersメソッドを呼び出す。
-```
-
-<br>
-
-**jp.kronos.dto.User.java**　※作成済み
-
-```java
-package jp.kronos.dto;
-
-public class User {
-    // ログインID
-    private String loginId;
-    
-    // パスワード
-    private String password;
-    
-    // 姓
-    private String lastName;
-    
-    // 名
-    private String firstName;
-    
-    /**
-     * コンストラクタ
-     * @param loginId ログインID
-     * @param password パスワード
-     * @param lastName 姓
-     * @param firstName 名
-     */
-    public User(String loginId, String password, String lastName, String firstName) {
-        this.loginId = loginId;
-        this.password = password;
-        this.lastName = lastName;
-        this.firstName = firstName;
-    }
-    
-    public String getLoginId() {
-        return loginId;
-    }
-    public void setLoginId(String loginId) {
-        this.loginId = loginId;
-    }
-    public String getPassword() {
-        return password;
-    }
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    public String getLastName() {
-        return lastName;
-    }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-    public String getFirstName() {
-        return firstName;
-    }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-}
 ```
 
 <br>
