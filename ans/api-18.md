@@ -26,19 +26,10 @@ public class UserSample {
             System.out.println(user.getLastName() + " " + user.getFirstName());
         }
     }
-    
-    public boolean login(String loginId, String password) {
-        for (User user : users) {
-            if (user.getLoginId().equals(loginId) && user.getPassword().equals(password)) {
-                return true;
-            }
-        }
-        return false;
-    }
 }
 ```
 
-#### ApiMain19.java
+#### ApiMain18.java
 
 ```java
 package jp.kronos.main;
@@ -49,12 +40,7 @@ public class ApiMain18 {
 
     public static void main(String[] args) {
         UserSample userSample = new UserSample();
-        
-        if (userSample.login("user01", "pass02")) {
-            System.out.println("Login Success!");
-        } else {
-            System.out.println("Login Failure!");
-        }
+        userSample.showUsers();
     }
 
 }

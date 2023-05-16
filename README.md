@@ -142,7 +142,7 @@ ApiMain10クラス（パッケージ：jp.kronos.main）
 
 <br>
 
-### 演習11
+### 演習11　※演習10のつづき
 
 ```
 演習10で、PrefListSampleクラスのexecuteメソッドの繰り返し処理を拡張for文に修正する。
@@ -211,7 +211,7 @@ ApiMain13クラス（パッケージ：jp.kronos.main）
 
 <br>
 
-### 演習14
+### 演習14　※演習13のつづき
 
 ```
 PrefMapSampleクラス（パッケージ：jp.kronos.sample）
@@ -350,56 +350,120 @@ ApiMain17クラス（パッケージ：jp.kronos.main）
 ### 演習18
 
 ```
-作成中
+Userクラス（パッケージ：jp.kronos.domain）
+　ログインID、パスワード、姓、名のフィールドとそれぞれのgetter/setterを持つクラス。
+UserSampleクラス（パッケージ：jp.kronos.sample）
+　①ArrayListフィールド（users）をprivateなフィールドとして定義する
+　②コンストラクタでusersに以下の情報をセットする。
+　　以下の情報を持つUserインスタンス
+　　　ログインID："user01"、パスワード："pass01"、姓："Yamada"、名："Taro"
+　　以下の情報を持つUserインスタンス
+　　　ログインID："user02"、パスワード："pass02"、姓："Suzuki"、名："Hanako"
+　　以下の情報を持つUserインスタンス
+　　　ログインID："user03"、パスワード："pass03"、姓："Tanaka"、名："Gonzalez"
+　③showUsersメソッドでusersに格納されている各Userインスタンスの姓と名をコンソールに出力する。
+
+ApiMain18クラス（パッケージ：jp.kronos.main）
+　mainメソッドに以下の処理を記述する。
+　①UserSampleクラスのインスタンスを生成し、showUsersメソッドを呼び出す。
 ```
 
 <br>
 
-### 演習19
+**jp.kronos.dto.User.java**　※作成済み
+
+```java
+package jp.kronos.dto;
+
+public class User {
+    // ログインID
+    private String loginId;
+    
+    // パスワード
+    private String password;
+    
+    // 姓
+    private String lastName;
+    
+    // 名
+    private String firstName;
+    
+    /**
+     * コンストラクタ
+     * @param loginId ログインID
+     * @param password パスワード
+     * @param lastName 姓
+     * @param firstName 名
+     */
+    public User(String loginId, String password, String lastName, String firstName) {
+        this.loginId = loginId;
+        this.password = password;
+        this.lastName = lastName;
+        this.firstName = firstName;
+    }
+    
+    public String getLoginId() {
+        return loginId;
+    }
+    public void setLoginId(String loginId) {
+        this.loginId = loginId;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+}
+```
+
+<br>
+
+**＜出力結果＞**
 
 ```
-SimpleFileReaderSampleクラス（パッケージ：jp.kronos.sample）
-　executeメソッド(引数：なし、戻り値：List)
-　　テキストファイル「sample.txt」から読み込んだ文字列をArrayList<String>に格納して返却する
+Yamada Taro
+Suzuki Hanako
+Tanaka Gonzalez
+```
 
-sample.txt
-　自由に作成しなさい
+<br>
+
+[解答例](/ans/api-18.md)
+
+<br>
+
+### 演習19　※演習18のつづき
+
+```
+UserSampleクラス（パッケージ：jp.kronos.sample）
+　loginメソッドを定義し、以下の処理を記述する。
+　①引数と戻り値は以下のように定義する。
+　　引数：String（ログインID）、String（パスワード）
+　　戻り値：boolean
+　②引数のログインIDとパスワードに一致するUserインスタンスがArrayListフィールド（users）内に存在すれば戻り値としてtrueを返す。
+　③Userインスタンスが存在しなければ戻り値としてfalseを返す。
 
 ApiMain19クラス（パッケージ：jp.kronos.main）
 　mainメソッドに以下の処理を記述する。
-　①SimpleFileReaderSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
-　②executeメソッドの戻り値を受け取り、すべて標準出力する。
+　①UserSampleクラスのインスタンスを生成し、loginメソッドを呼び出す。
+　②戻り値がtrueの場合は「Login Success!」、falseの場合は「Login Failure!」とコンソールに出力する。
 ```
 
 <br>
 
 [解答例](/ans/api-19.md)
-
-<br>
-
-### 演習20
-
-```
-employee.csv
-　以下の内容でCSVファイルを用意する。
-　1,Yamada Taro,30,Male
-　2,Tanaka Hanako,26,Female
-　3,Yamamoto Kenji,42,Male
-　4,Suzuki Ichiro,45,Male
-　5,Yamada Chie,34,Female
-　6,Goto Hajime,23,Male
-　7,Tajima Kanako,31,Female
-　8,Yamada Kotaro,27,Male
-　9,Fukushige Yozo,52,Male
-　10,Yamamoto Tetsuko,27,Female
-
-ApiMain8クラス（パッケージ：jp.kronos.main）
-　mainメソッドに以下の処理を記述する。
-　①CSVファイル「employee.csv」から読み込んだ情報のうち、「Yamada」さんの情報のみ標準出力する。
-```
-
-<br>
-
-[解答例](/ans/api-20.md)
 
 <br>
