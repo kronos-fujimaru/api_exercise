@@ -346,7 +346,7 @@ ApiMain17クラス（パッケージ：jp.kronos.main）
 
 <br>
 
-### 演習18
+<!-- ### 演習18
 
 ```
 Userクラス（パッケージ：jp.kronos.dto）
@@ -405,4 +405,4 @@ ApiMain19クラス（パッケージ：jp.kronos.main）
 
 [解答例](/ans/api-19.md)
 
-<br>
+<br> -->
