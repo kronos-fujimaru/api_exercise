@@ -17,11 +17,6 @@ public class PrefMapSample {
     
     public void execute(String key) {
         System.out.println(prefs.get(key));
-        
-        String pref = prefs.get(key);
-        if (pref == null) {
-            throw new NullPointerException("指定した都道府県IDは存在しません。");
-        }
     }
 }
 ```
