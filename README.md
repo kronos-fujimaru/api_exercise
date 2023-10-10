@@ -66,7 +66,7 @@ TRUE
 
 [解答例](/ans/api-03.md)
 
-<br>
+<br><br>
 
 ### 演習4
 
@@ -86,7 +86,7 @@ TRUE
 
 [解答例](/ans/api-04.md)
 
-<br>
+<br><br>
 
 ### 演習5
 
@@ -106,7 +106,7 @@ HellaWarld
 
 [解答例](/ans/api-05.md)
 
-<br>
+<br><br>
 
 ### 演習6
 
@@ -128,7 +128,7 @@ rld
 
 [解答例](/ans/api-06.md)
 
-<br>
+<br><br>
 
 ### 演習7
 
@@ -148,7 +148,7 @@ World
 
 [解答例](/ans/api-07.md)
 
-<br>
+<br><br>
 
 ### 演習8
 
@@ -168,7 +168,7 @@ HELLOWORLD
 
 [解答例](/ans/api-08.md)
 
-<br>
+<br><br>
 
 ### 演習9
 
@@ -188,16 +188,20 @@ HelloWorld
 
 [解答例](/ans/api-09.md)
 
-<br>
+<br><br>
 
 ### 演習10
 
 **PrefListSampleクラス（パッケージ：jp.kronos.sample）**
+
 executeメソッド（戻り値なし、引数なし）に以下の処理を記述する。
 1. String型のArrayListインスタンスに「大阪」「東京」「名古屋」「福岡」の文字列を格納する。
 2. 通常のfor文（拡張for文ではない）を使用してArrayListに格納されている値をすべてコンソールに出力する。
 
+<br>
+
 **ApiMain10クラス（パッケージ：jp.kronos.main）**
+
 mainメソッドに以下の処理を記述する。
 1. PrefListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
 
@@ -205,7 +209,7 @@ mainメソッドに以下の処理を記述する。
 
 [解答例](/ans/api-10.md)
 
-<br>
+<br><br>
 
 ### 演習11　※演習10のつづき
 
@@ -220,12 +224,16 @@ mainメソッドに以下の処理を記述する。
 ### 演習12
 
 **NumListSampleクラス（パッケージ：jp.kronos.sample）**
+
 executeメソッド（戻り値なし、引数なし）に以下の処理を記述する。
 1. Integer型のArrayListインスタンスに「1000」「500」「300」「2000」「700」の整数を格納する。
 2. ArrayListに格納されている値の合計値をArrayListに追加する。
 3. ArrayListに格納されている各値をコンソールに出力した後に、「合計: [合計値]」を出力する。
 
+<br>
+
 **ApiMain12クラス（パッケージ：jp.kronos.main）**
+
 mainメソッドに以下の処理を記述する。
 1. NumListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
 
@@ -246,43 +254,49 @@ mainメソッドに以下の処理を記述する。
 
 [解答例](/ans/api-12.md)
 
-<br>
+<br><br>
 
 ### 演習13
 
 
 **PrefMapSampleクラス（パッケージ：jp.kronos.sample）**
 1. HashMapフィールド（prefs）をprivateなフィールドとして定義する
-2. コンストラクタでprefsに以下の情報をセットする。（すべてString型の文字列）
+2. コンストラクタでprefsに以下の情報をセットする。（すべてString型の文字列）<br>
 　キー："001" 値："大阪"
 　キー："002" 値："東京"
 　キー："003" 値："名古屋"
 　キー："004" 値："福岡"
 3. executeメソッドでStringの引数（キー）を受け取り、prefs内でキーに一致する値を取得し、コンソールに出力する。
 
+<br>
+
 **ApiMain13クラス（パッケージ：jp.kronos.main）**
+
 mainメソッドに以下の処理を記述する。
 1. PrefMapSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
 　※キーは適当に指定する
-```
 
 <br>
 
 [解答例](/ans/api-13.md)
 
-<br>
+<br><br>
 
 ### 演習14　※演習13のつづき
 
 **PrefMapSampleクラス（パッケージ：jp.kronos.sample）**
+
 executeメソッドを以下のように修正する。
 1. 引数（キー）でHashMapフィールド（prefs）から取得した値がNullの場合は、以下のメッセージを追加してNullPointerExceptionをスローする。
 　　メッセージ: 指定した都道府県IDは存在しません。
 
+<br>
+
 **ApiMain13クラス（パッケージ：jp.kronos.main）**
+
 mainメソッドを以下のように修正する。
-1. NullPointerExceptionをキャッチし、例外オブジェクトのメッセージをコンソールに出力する。
-　　※getMessage()メソッドで例外オブジェクトのメッセージを取得できる
+1. NullPointerExceptionをキャッチし、例外オブジェクトのメッセージをコンソールに出力する。<br>
+※getMessage()メソッドで例外オブジェクトのメッセージを取得できる
 ```
 
 <br>
@@ -302,6 +316,7 @@ mainメソッドを以下のように修正する。
 ### 演習15
 
 **ApiMain15クラス（パッケージ：jp.kronos.main）**
+
 Scannerクラスを使用した標準入力でジャンケンをするプログラムである。0（グー）、1（チョキ）、2（パー）のいずれかを入力してもらい、コンピュータと勝負する。ただし、整数以外（文字列など）を入力すると例外が発生するため以下のように例外の対応をする。
 1. 発生する例外の種類を調べる。
 2. 該当する例外をキャッチし、以下のメッセージをコンソールに表示する。
