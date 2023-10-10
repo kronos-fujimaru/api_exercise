@@ -1,45 +1,68 @@
 # Java API 演習問題
 
-**APIドキュメント**
+Eclipse上で java_api_exerciseプロジェクトを作成し、APIドキュメントを参照しながら課題に取り組んでください。
 
-<a href="https://docs.oracle.com/javase/jp/17/docs/api/" target="_blank">https://docs.oracle.com/javase/jp/17/docs/api/</a>
+<br>
+
+**APIドキュメント（JDK 17）**<br><a href="https://docs.oracle.com/javase/jp/17/docs/api/" target="_blank">https://docs.oracle.com/javase/jp/17/docs/api/</a>
 
 <br>
 
 ### 演習1
 
+**ApiMain1クラス（パッケージ：jp.kronos.main）**
+
+任意の文字列内に 'r' が含まれていれば TRUE、含まれていなければ FALSE を表示してください。
+
+<br>
+
+**<期待結果>**　文字列 "HelloWorld" の場合
+
 ```
-StringクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
-"HelloWorld"内に 'r' が含まれているかを T または F で表示しなさい。
+TRUE
 ```
 
 <br>
 
 [解答例](/ans/api-01.md)
 
-<br>
+<br><br>
 
 ### 演習2
 
+**ApiMain2クラス（パッケージ：jp.kronos.main）**
+
+"HelloWorld"内に "orl"が出現するインデックス位置を表示してください。
+
+<br>
+
+**<期待結果>**
+
 ```
-StringクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
-"HelloWorld"内に "orl"が出現するインデックス位置を表示しなさい。
+6
 ```
 
 <br>
 
 [解答例](/ans/api-02.md)
 
-<br>
+<br><br>
 
 ### 演習3
 
-```
-StringクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
-"HelloWorld"内に 'l'が最後に出現するインデックス位置を表示しなさい。
-```
+**ApiMain3クラス（パッケージ：jp.kronos.main）**
+
+"HelloWorld"内に 'l'が最後に出現するインデックス位置を表示してください。
 
 <br>
+
+**<期待結果>**
+
+```
+8
+```
+
+<br><br>
 
 [解答例](/ans/api-03.md)
 
@@ -47,9 +70,16 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 
 ### 演習4
 
+**ApiMain4クラス（パッケージ：jp.kronos.main）**
+
+任意の文字列の文字数を表示してください。
+
+<br>
+
+**<期待結果>**　文字列 "HelloWorld" の場合
+
 ```
-StringクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
-"HelloWorld"の文字数を表示しなさい。
+10
 ```
 
 <br>
@@ -60,9 +90,16 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 
 ### 演習5
 
-```
-StringクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
+**ApiMain5クラス（パッケージ：jp.kronos.main）**
+
 "HellaWarld"の'a'を'o'に置換して表示しなさい。
+
+<br>
+
+**<期待結果>**　文字列 "HelloWorld" の場合
+
+```
+HellaWarld
 ```
 
 <br>
@@ -73,9 +110,18 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 
 ### 演習6
 
+**ApiMain6クラス（パッケージ：jp.kronos.main）**
+
+"HelloWorld"を'o'で区切った部分文字列を改行しながらすべて表示してください。
+
+<br>
+
+**<期待結果>**
+
 ```
-StringクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
-"HelloWorld"を'o'で区切った部分文字列を改行しながらすべて表示しなさい。
+Hell
+W
+rld
 ```
 
 <br>
@@ -86,9 +132,16 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 
 ### 演習7
 
+**ApiMain7クラス（パッケージ：jp.kronos.main）**
+
+"HelloWorldJava"から "Hello" の部分を取り出して表示してください。
+
+<br>
+
+**<期待結果>**
+
 ```
-StringクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
-"HelloWorld"のインデックス位置、3～7の部分文字列を表示しなさい。
+World
 ```
 
 <br>
@@ -99,9 +152,16 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 
 ### 演習8
 
+**ApiMain8クラス（パッケージ：jp.kronos.main）**
+
+任意の小文字半角英字を含む文字列をすべて大文字にして表示してください。
+
+<br>
+
+**<期待結果>**　文字列 "HelloWorld" の場合
+
 ```
-StringクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
-"HelloWorld"をすべて大文字にして表示しなさい。
+HELLOWORLD
 ```
 
 <br>
@@ -112,9 +172,16 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 
 ### 演習9
 
+**ApiMain9クラス（パッケージ：jp.kronos.main）**
+
+" HelloWorld "の前後の半角スペースを排除して表示してください。
+
+<br>
+
+**<期待結果>**
+
 ```
-StringクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
-" HelloWorld "の前後のスペースを排除して、表示しなさい。
+HelloWorld
 ```
 
 <br>
@@ -125,16 +192,14 @@ StringクラスのAPIドキュメントを参照し、以下の課題を解き�
 
 ### 演習10
 
-```
-PrefListSampleクラス（パッケージ：jp.kronos.sample）
-　executeメソッド（戻り値なし、引数なし）に以下の処理を記述する。
-　①String型のArrayListインスタンスに「大阪」「東京」「名古屋」「福岡」の文字列を格納する。
-　②通常のfor文（拡張for文ではない）を使用してArrayListに格納されている値をすべてコンソールに出力する。
+**PrefListSampleクラス（パッケージ：jp.kronos.sample）**
+executeメソッド（戻り値なし、引数なし）に以下の処理を記述する。
+1. String型のArrayListインスタンスに「大阪」「東京」「名古屋」「福岡」の文字列を格納する。
+2. 通常のfor文（拡張for文ではない）を使用してArrayListに格納されている値をすべてコンソールに出力する。
 
-ApiMain10クラス（パッケージ：jp.kronos.main）
-　mainメソッドに以下の処理を記述する。
-　①PrefListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
-```
+**ApiMain10クラス（パッケージ：jp.kronos.main）**
+mainメソッドに以下の処理を記述する。
+1. PrefListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
 
 <br>
 
@@ -144,9 +209,7 @@ ApiMain10クラス（パッケージ：jp.kronos.main）
 
 ### 演習11　※演習10のつづき
 
-```
 演習10で、PrefListSampleクラスのexecuteメソッドの繰り返し処理を拡張for文に修正する。
-```
 
 <br>
 
@@ -156,21 +219,19 @@ ApiMain10クラス（パッケージ：jp.kronos.main）
 
 ### 演習12
 
-```
-NumListSampleクラス（パッケージ：jp.kronos.sample）
-　executeメソッド（戻り値なし、引数なし）に以下の処理を記述する。
-　①Integer型のArrayListインスタンスに「1000」「500」「300」「2000」「700」の整数を格納する。
-　②ArrayListに格納されている値の合計値をArrayListに追加する。
-　③ArrayListに格納されている各値をコンソールに出力した後に、「合計: [合計値]」を出力する。
+**NumListSampleクラス（パッケージ：jp.kronos.sample）**
+executeメソッド（戻り値なし、引数なし）に以下の処理を記述する。
+1. Integer型のArrayListインスタンスに「1000」「500」「300」「2000」「700」の整数を格納する。
+2. ArrayListに格納されている値の合計値をArrayListに追加する。
+3. ArrayListに格納されている各値をコンソールに出力した後に、「合計: [合計値]」を出力する。
 
-ApiMain12クラス（パッケージ：jp.kronos.main）
-　mainメソッドに以下の処理を記述する。
-　①NumListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
-```
+**ApiMain12クラス（パッケージ：jp.kronos.main）**
+mainメソッドに以下の処理を記述する。
+1. NumListSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
 
 <br>
 
-**＜出力結果＞**
+**＜期待結果＞**
 
 ```
 1000
@@ -189,20 +250,20 @@ ApiMain12クラス（パッケージ：jp.kronos.main）
 
 ### 演習13
 
-```
-PrefMapSampleクラス（パッケージ：jp.kronos.sample）
-　①HashMapフィールド（prefs）をprivateなフィールドとして定義する
-　②コンストラクタでprefsに以下の情報をセットする。（すべてString型の文字列）
-　　キー："001" 値："大阪"
-　　キー："002" 値："東京"
-　　キー："003" 値："名古屋"
-　　キー："004" 値："福岡"
-　③executeメソッドでStringの引数（キー）を受け取り、prefs内でキーに一致する値を取得し、コンソールに出力する。
 
-ApiMain13クラス（パッケージ：jp.kronos.main）
-　mainメソッドに以下の処理を記述する。
-　①PrefMapSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
-　　※キーは適当に指定する
+**PrefMapSampleクラス（パッケージ：jp.kronos.sample）**
+1. HashMapフィールド（prefs）をprivateなフィールドとして定義する
+2. コンストラクタでprefsに以下の情報をセットする。（すべてString型の文字列）
+　キー："001" 値："大阪"
+　キー："002" 値："東京"
+　キー："003" 値："名古屋"
+　キー："004" 値："福岡"
+3. executeメソッドでStringの引数（キー）を受け取り、prefs内でキーに一致する値を取得し、コンソールに出力する。
+
+**ApiMain13クラス（パッケージ：jp.kronos.main）**
+mainメソッドに以下の処理を記述する。
+1. PrefMapSampleクラスのインスタンスを生成し、executeメソッドを呼び出す。
+　※キーは適当に指定する
 ```
 
 <br>
@@ -213,21 +274,20 @@ ApiMain13クラス（パッケージ：jp.kronos.main）
 
 ### 演習14　※演習13のつづき
 
-```
-PrefMapSampleクラス（パッケージ：jp.kronos.sample）
-　executeメソッドを以下のように修正する。
-　①引数（キー）でHashMapフィールド（prefs）から取得した値がNullの場合は、以下のメッセージを追加してNullPointerExceptionをスローする。
+**PrefMapSampleクラス（パッケージ：jp.kronos.sample）**
+executeメソッドを以下のように修正する。
+1. 引数（キー）でHashMapフィールド（prefs）から取得した値がNullの場合は、以下のメッセージを追加してNullPointerExceptionをスローする。
 　　メッセージ: 指定した都道府県IDは存在しません。
 
-ApiMain13クラス（パッケージ：jp.kronos.main）
-　mainメソッドを以下のように修正する。
-　①NullPointerExceptionをキャッチし、例外オブジェクトのメッセージをコンソールに出力する。
+**ApiMain13クラス（パッケージ：jp.kronos.main）**
+mainメソッドを以下のように修正する。
+1. NullPointerExceptionをキャッチし、例外オブジェクトのメッセージをコンソールに出力する。
 　　※getMessage()メソッドで例外オブジェクトのメッセージを取得できる
 ```
 
 <br>
 
-**＜出力結果＞**　※キーに "005" を指定した場合
+**＜期待結果＞**　※キーに "005" を指定した場合
 
 ```
 指定した都道府県IDは存在しません。
@@ -241,16 +301,12 @@ ApiMain13クラス（パッケージ：jp.kronos.main）
 
 ### 演習15
 
-```
-ApiMain15クラス（パッケージ：jp.kronos.main）
-　Scannerクラスを使用した標準入力でジャンケンをするプログラムである。
-　0（グー）、1（チョキ）、2（パー）のいずれかを入力してもらい、コンピュータと勝負する。
-　ただし、整数以外（文字列など）を入力すると例外が発生するため以下のように例外の対応をする。
-　①発生する例外の種類を調べる。
-　②該当する例外をキャッチし、以下のメッセージをコンソールに表示する。
-　　メッセージ: 入力値が不正です。
-　③ジャンケンプログラムを終了する。
-```
+**ApiMain15クラス（パッケージ：jp.kronos.main）**
+Scannerクラスを使用した標準入力でジャンケンをするプログラムである。0（グー）、1（チョキ）、2（パー）のいずれかを入力してもらい、コンピュータと勝負する。ただし、整数以外（文字列など）を入力すると例外が発生するため以下のように例外の対応をする。
+1. 発生する例外の種類を調べる。
+2. 該当する例外をキャッチし、以下のメッセージをコンソールに表示する。
+「メッセージ: 入力値が不正です。」
+3. ジャンケンプログラムを終了する。
 
 <br>
 
@@ -301,7 +357,7 @@ public class ApiMain15 {
 
 <br>
 
-**＜出力結果＞**　※"a"を入力した場合
+**＜期待結果＞**　※"a"を入力した場合
 
 ```
 0:グー、1:チョキ、2:パー
@@ -318,9 +374,16 @@ a
 
 ### 演習16
 
+**ApiMain16クラス（パッケージ：jp.kronos.main）**
+
+LocalDateクラスを使用し、ある任意の日付と現在日付が同日であれば "Same."、異なる日であれば "Not Same." と表示してください。
+
+<br>
+
+**<期待結果>**　※任意の日付と現在日付が同日の場合
+
 ```
-ApiMain16クラス（パッケージ：jp.kronos.main）
-　本日の日付を「2020年8月19日 09時15分」のような形式で表示しなさい。
+Same.
 ```
 
 <br>
@@ -331,14 +394,21 @@ ApiMain16クラス（パッケージ：jp.kronos.main）
 
 ### 演習17
 
-```
-ApiMain17クラス（パッケージ：jp.kronos.main）
-　CalendarクラスのAPIドキュメントを参照し、以下の課題を解きなさい。
-　あなたの生年月日の曜日を表示しなさい。
-　（例）1986年8月19日なら「火曜日」と表示する。
-```
+**ApiMain17クラス（パッケージ：jp.kronos.main）**
 
-> ヒント<br>Calendarクラスのget()メソッドで引数に「Calendar.DAY_OF_WEEK」を指定すると、1（日曜日）～ 7（土曜日）の数値が取得できます。
+LocalDateクラスを使用し、現在日付が任意の開始日と終了日の範囲内であれば "OK"、範囲外であれば "NG" と表示してください。なお、開始日または終了日と同日も範囲内とする。
+
+<br>
+
+**<期待結果>**　※それぞれの日付が以下の場合
+
+- 現在日：2023/05/10
+- 開始日：2023/05/07
+- 終了日：2023/05/10
+
+```
+OK
+```
 
 <br>
 

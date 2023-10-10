@@ -1,6 +1,7 @@
-#### StringSample.java
+#### ApiMain8.java
+
 ```java
-public class StringSample {
+public class ApiMain8 {
 
     public static void main(String[] args) {
         String str = "HelloWorld";

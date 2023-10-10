@@ -1,17 +1,16 @@
-#### StringSample.java
+#### ApiMain1.java
+
 ```java
-public class StringSample {
+public class ApiMain1 {
 
     public static void main(String[] args) {
-
         String str = "HelloWorld";
 
         if (str.contains("r")) {
-            System.out.println("T");
+            System.out.println("TRUE");
         } else {
-            System.out.println("F");
+            System.out.println("FALSE");
         }
-
     }
 
 }
