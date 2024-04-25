@@ -96,10 +96,10 @@ TRUE
 
 <br>
 
-**<期待結果>**　文字列 "HelloWorld" の場合
+**<期待結果>**　文字列 "HellaWarld" の場合
 
 ```
-HellaWarld
+HelloWorld
 ```
 
 <br>
