@@ -4,7 +4,7 @@ Eclipse上で java_api_exerciseプロジェクトを作成し、APIドキュメ�
 
 <br>
 
-**APIドキュメント（JDK 17）**<br><a href="https://docs.oracle.com/javase/jp/17/docs/api/" target="_blank">https://docs.oracle.com/javase/jp/17/docs/api/</a>
+**APIドキュメント（JDK 21）**<br><a href="https://docs.oracle.com/javase/jp/21/docs/api/" target="_blank">https://docs.oracle.com/javase/jp/21/docs/api/</a>
 
 <br>
 
