@@ -134,7 +134,7 @@ rld
 
 **ApiMain7クラス（パッケージ：jp.kronos.main）**
 
-"HelloWorldJava"から "Hello" の部分を取り出して表示してください。
+"HelloWorldJava"から "World" の部分を取り出して表示してください。
 
 <br>
 
